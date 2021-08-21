@@ -1,5 +1,6 @@
 THISDIR = $(shell pwd)
-go_version = 1.16.5
+go_version = 1.15.2
+# use host target
 CC        = gcc
 GCC       = gcc
 CXX       = g++
@@ -31,11 +32,11 @@ endif
 
 go_build:
 	mkdir -p $(THISDIR)/go
-	( if [ ! -f $(THISDIR)/go/go1.16.5.linux-amd64.tar.gz ]; then \
-	curl --create-dirs -L https://gomirrors.org/dl/go/go1.16.6.linux-amd64.tar.gz -o $(THISDIR)/go/go$(go_version).linux-amd64.tar.gz ; \
+	( if [ ! -f $(THISDIR)/go/go$(go_version).linux-amd64.tar.gz ]; then \
+	curl --create-dirs -L https://gomirrors.org/dl/go/go$(go_version).linux-amd64.tar.gz -o $(THISDIR)/go/go$(go_version).linux-amd64.tar.gz ; \
 	fi )
 	( if [ ! -d $(THISDIR)/go/go ]; then \
-	tar zxfv $(THISDIR)/go/go1.16.5.linux-amd64.tar.gz -C go ; \
+	tar zxfv $(THISDIR)/go/go$(go_version).linux-amd64.tar.gz -C go ; \
 	fi )
 
 clean:
