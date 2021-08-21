@@ -1,5 +1,5 @@
 THISDIR = $(shell pwd)
-go_version = 1.16.6
+go_version = 1.15.2
 CC        = gcc
 GCC       = gcc
 CXX       = g++
