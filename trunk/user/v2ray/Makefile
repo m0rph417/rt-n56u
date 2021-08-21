@@ -2,8 +2,8 @@ THISDIR = $(shell pwd)
 v2ray_dir="v2ray.com/core/main"
 export GO111MODULE=on
 export GOPROXY=https://goproxy.io
-V2ray_VERSION := 4.41.1
-V2ray_URL := https://github.com/v2fly/v2ray-core/archive/refs/tags/v4.41.1.tar.gz
+V2ray_VERSION := 4.34.0
+V2ray_URL := https://github.com/v2fly/v2ray-core/archive/refs/tags/v4.34.0.tar.gz
 V2RAY_SED_ARGS:=
 V2RAY_SED_ARGS += \
 	s/_ "v2ray.com\/core\/main\/json"/\/\/ &/; \
